@@ -4,10 +4,43 @@
   align-items: center;
   width: 100%;
   padding: 10px;
+  background-color: rgb(225, 255, 117);
 
   &__link {
+    position: relative;
+    display: block;
+    box-sizing: content-box;
     font-family: sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 16px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.72);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      position: absolute;
+      background-color: rgb(102, 112, 252);
+      bottom: -3px;
+      transition: width 0.2s linear, color 0.2s linear;
+    }
+
+    &:hover {
+      color: rgb(0, 0, 0);
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: rgb(102, 112, 252);
+
+      &::before {
+        width: 100%;
+      }
+    }
   }
 }

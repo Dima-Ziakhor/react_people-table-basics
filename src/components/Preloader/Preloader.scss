@@ -1,0 +1,19 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader {
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+  border: 2px solid rgb(102, 112, 252);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: rotate 0.8s ease-in-out infinite;
+}

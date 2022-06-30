@@ -1,0 +1,10 @@
+.table {
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  .table__row th,
+  .table__row td {
+    padding: 3px;
+    border: 1px solid #000;
+  }
+}
